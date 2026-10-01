@@ -1,0 +1,7 @@
+PyQt6
+deep-translator
+python-docx
+openpyxl
+pdfplumber
+reportlab
+pywin32

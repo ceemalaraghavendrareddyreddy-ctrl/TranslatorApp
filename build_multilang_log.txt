@@ -1,0 +1,161 @@
+4002 INFO: PyInstaller: 6.17.0, contrib hooks: 2025.11
+4004 INFO: Python: 3.12.10
+4068 INFO: Platform: Windows-10-10.0.19045-SP0
+4068 INFO: Python environment: C:\Program Files\Python312
+4078 INFO: wrote .\TranslatorAppMultilanguage.spec
+4242 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\user\\Desktop\\Material_management_System\\TranslatorApp',
+ 'C:\\Program Files\\Python312\\python312.zip',
+ 'C:\\Program Files\\Python312\\DLLs',
+ 'C:\\Program Files\\Python312\\Lib',
+ 'C:\\Program Files\\Python312',
+ 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages',
+ 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32',
+ 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\win32\\lib',
+ 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\Pythonwin',
+ 'C:\\Program Files\\Python312\\Lib\\site-packages',
+ 'C:\\Users\\user\\Desktop\\Material_management_System\\TranslatorApp']
+12844 INFO: checking Analysis
+12844 INFO: Building Analysis because Analysis-00.toc is non existent
+12844 INFO: Looking for Python shared library...
+12968 INFO: Using Python shared library: C:\Program Files\Python312\python312.dll
+12968 INFO: Running Analysis Analysis-00.toc
+12968 INFO: Target bytecode optimization level: 0
+12968 INFO: Initializing module dependency graph...
+12969 INFO: Initializing module graph hook caches...
+13908 INFO: Analyzing modules for base_library.zip ...
+23079 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+35309 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+43331 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+48663 INFO: Caching module dependency graph...
+48828 INFO: Analyzing C:\Users\user\Desktop\Material_management_System\TranslatorApp\translator_app.py
+49053 INFO: Processing standard module hook 'hook-PyQt6.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+51526 INFO: Processing standard module hook 'hook-PyQt6.QtWidgets.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+57326 INFO: Processing standard module hook 'hook-PyQt6.QtCore.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+64593 INFO: Processing standard module hook 'hook-PyQt6.QtGui.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+88438 INFO: Processing standard module hook 'hook-PyQt6.QtPrintSupport.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+89657 INFO: Processing standard module hook 'hook-urllib3.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+91249 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+91290 INFO: SetuptoolsInfo: initializing cached setuptools info...
+105524 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
+105603 INFO: Processing standard module hook 'hook-setuptools.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+106015 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+106056 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+106444 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+106517 INFO: Processing pre-safe-import-module hook 'hook-jaraco.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+106568 INFO: Setuptools: 'jaraco' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco'!
+106651 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+106655 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.more_itertools'!
+107365 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+108524 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+109072 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+110475 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+113533 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+114944 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+114960 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+117435 INFO: Processing pre-safe-import-module hook 'hook-importlib_metadata.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+117438 INFO: Setuptools: 'importlib_metadata' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.importlib_metadata'!
+117534 INFO: Processing standard module hook 'hook-setuptools._vendor.importlib_metadata.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+117559 INFO: Processing pre-safe-import-module hook 'hook-zipp.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+117572 INFO: Setuptools: 'zipp' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.zipp'!
+119493 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+119495 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
+122823 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+122826 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
+132500 INFO: Processing standard module hook 'hook-charset_normalizer.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+136194 INFO: Processing standard module hook 'hook-cryptography.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+148079 INFO: hook-cryptography: cryptography does not seem to be using dynamically linked OpenSSL.
+158444 INFO: Processing standard module hook 'hook-certifi.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+172496 INFO: Processing standard module hook 'hook-lxml.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+179962 INFO: Processing standard module hook 'hook-lxml.etree.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+181398 INFO: Processing standard module hook 'hook-openpyxl.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+189862 INFO: Processing standard module hook 'hook-numpy.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+214776 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+247606 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+248011 INFO: Processing standard module hook 'hook-xml.dom.domreg.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+253779 INFO: Processing standard module hook 'hook-PIL.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+254137 INFO: Processing standard module hook 'hook-PIL.Image.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+256749 INFO: Processing standard module hook 'hook-PIL.ImageFilter.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+261827 INFO: Processing standard module hook 'hook-docx.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+266864 INFO: Processing standard module hook 'hook-pdfminer.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+269615 INFO: Processing standard module hook 'hook-pandas.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+291537 INFO: Processing standard module hook 'hook-pytz.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+307832 INFO: Processing standard module hook 'hook-pandas.io.formats.style.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+316477 INFO: Processing standard module hook 'hook-pandas.plotting.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+316794 INFO: Processing standard module hook 'hook-matplotlib.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+321874 INFO: Processing pre-safe-import-module hook 'hook-gi.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+322870 INFO: Processing standard module hook 'hook-matplotlib.backend_bases.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+325964 INFO: Processing standard module hook 'hook-jinja2.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+328611 INFO: Processing standard module hook 'hook-matplotlib.backends.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+328966 INFO: Processing standard module hook 'hook-matplotlib.pyplot.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+332138 INFO: Processing standard module hook 'hook-dateutil.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+332648 INFO: Processing pre-safe-import-module hook 'hook-six.moves.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+345212 INFO: Processing standard module hook 'hook-sqlalchemy.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+365650 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+371418 INFO: Processing standard module hook 'hook-pandas.io.clipboard.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+377693 INFO: Processing standard module hook 'hook-pycparser.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+391045 INFO: Processing standard module hook 'hook-pypdfium2.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+391835 INFO: Processing standard module hook 'hook-pypdfium2_raw.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+394524 INFO: Processing standard module hook 'hook-reportlab.lib.utils.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+395311 INFO: Processing standard module hook 'hook-reportlab.pdfbase._fontdata.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+417903 INFO: Processing pre-safe-import-module hook 'hook-win32com.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\pre_safe_import_module'
+420790 INFO: Processing standard module hook 'hook-win32com.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+420905 INFO: Processing standard module hook 'hook-pythoncom.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+421210 INFO: Processing standard module hook 'hook-pywintypes.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+424691 INFO: Processing module hooks (post-graph stage)...
+426589 INFO: Processing standard module hook 'hook-lxml.isoschematron.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+426876 WARNING: Hidden import "pycparser.lextab" not found!
+426876 WARNING: Hidden import "pycparser.yacctab" not found!
+427893 INFO: Processing standard module hook 'hook-matplotlib.backends.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+427935 INFO: Matplotlib backend selection method: automatic discovery of used backends
+430638 INFO: Trying determine the default backend as first importable candidate from the list: ['QtAgg', 'Qt5Agg', 'Gtk4Agg', 'Gtk3Agg', 'TkAgg', 'WxAgg']
+434154 INFO: Selected matplotlib backends: ['QtAgg']
+434213 INFO: Processing standard module hook 'hook-matplotlib.backends.backend_qtagg.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+434251 INFO: Processing standard module hook 'hook-matplotlib.backends.qt_compat.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+434268 INFO: hook-matplotlib.backends.qt_compat: selected 'PyQt6' as Qt bindings because hook for 'PyQt6' has been run before.
+437506 INFO: Processing standard module hook 'hook-PIL.SpiderImagePlugin.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+438030 INFO: Processing standard module hook 'hook-sqlalchemy.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+443372 WARNING: Hidden import "pysqlite2" not found!
+443373 WARNING: Hidden import "MySQLdb" not found!
+443374 WARNING: Hidden import "psycopg2" not found!
+451645 INFO: Processing standard module hook 'hook-lxml.objectify.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+451718 INFO: Performing binary vs. data reclassification (1132 entries)
+492962 INFO: Looking for ctypes DLLs
+495124 INFO: Analyzing run-time hooks ...
+495150 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks'
+495199 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks'
+495347 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks'
+495452 INFO: Including run-time hook 'pyi_rth_pywintypes.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+495520 INFO: Including run-time hook 'pyi_rth_pythoncom.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+495525 INFO: Including run-time hook 'pyi_rth_pyqt6.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks'
+495719 INFO: Processing pre-find-module-path hook 'hook-_pyi_rth_utils.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+496117 INFO: Processing standard module hook 'hook-_pyi_rth_utils.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks'
+496206 INFO: Including run-time hook 'pyi_rth_mplconfig.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks'
+496517 INFO: Including run-time hook 'pyi_rth_setuptools.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks'
+496562 INFO: Including run-time hook 'pyi_rth_cryptography_openssl.py' from 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+496905 INFO: Creating base_library.zip...
+497768 INFO: Looking for dynamic libraries
+535482 INFO: Extra DLL search directories (AddDllDirectory): ['C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyQt6\\Qt6\\bin', 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy.libs', 'C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\pandas.libs']
+535482 INFO: Extra DLL search directories (PATH): ['C:\\Users\\user\\AppData\\Roaming\\Python\\Python312\\site-packages\\PyQt6\\Qt6\\bin']
+548893 INFO: Warnings written to C:\Users\user\Desktop\Material_management_System\TranslatorApp\build_multilang\TranslatorAppMultilanguage\warn-TranslatorAppMultilanguage.txt
+549517 INFO: Graph cross-reference written to C:\Users\user\Desktop\Material_management_System\TranslatorApp\build_multilang\TranslatorAppMultilanguage\xref-TranslatorAppMultilanguage.html
+549911 INFO: checking PYZ
+549911 INFO: Building PYZ because PYZ-00.toc is non existent
+549911 INFO: Building PYZ (ZlibArchive) C:\Users\user\Desktop\Material_management_System\TranslatorApp\build_multilang\TranslatorAppMultilanguage\PYZ-00.pyz
+555366 INFO: Building PYZ (ZlibArchive) C:\Users\user\Desktop\Material_management_System\TranslatorApp\build_multilang\TranslatorAppMultilanguage\PYZ-00.pyz completed successfully.
+555566 INFO: checking PKG
+555567 INFO: Building PKG because PKG-00.toc is non existent
+555567 INFO: Building PKG (CArchive) TranslatorAppMultilanguage.pkg
+620671 INFO: Building PKG (CArchive) TranslatorAppMultilanguage.pkg completed successfully.
+620731 INFO: Bootloader C:\Users\user\AppData\Roaming\Python\Python312\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+620732 INFO: checking EXE
+620732 INFO: Building EXE because EXE-00.toc is non existent
+620732 INFO: Building EXE from EXE-00.toc
+620774 INFO: Copying bootloader EXE to C:\Users\user\Desktop\Material_management_System\TranslatorApp\dist\TranslatorAppMultilanguage.exe
+622422 INFO: Copying icon to EXE
+622588 INFO: Copying 0 resources to EXE
+622588 INFO: Embedding manifest in EXE
+622677 INFO: Appending PKG archive to EXE
+623967 INFO: Fixing EXE headers
+643388 INFO: Building EXE from EXE-00.toc completed successfully.
+643454 INFO: Build complete! The results are available in: C:\Users\user\Desktop\Material_management_System\TranslatorApp\dist
