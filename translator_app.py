@@ -13,6 +13,7 @@ import sys
 import copy
 import time
 import traceback
+from concurrent.futures import ThreadPoolExecutor
 
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel,
@@ -284,6 +285,22 @@ class Translator:
         return result
 
 
+def translate_segment_all_languages(original, translators, pool):
+    """Translate one piece of text into every language in `translators`
+    (code -> Translator) concurrently, using the given thread pool. Each
+    language's Translator wraps its own independent engine and keeps its
+    own cache/retry state, so there's no shared mutable state between
+    threads here -- running them in parallel turns N sequential network
+    round-trips (plus N separate REQUEST_DELAY sleeps and N separate retry
+    backoffs) into roughly the cost of a single round-trip, instead of
+    stacking them one after another."""
+    futures = {
+        pool.submit(translator.translate, original): code
+        for code, translator in translators.items()
+    }
+    return {code: future.result() for future, code in futures.items()}
+
+
 def translate_xlsx(in_path, out_path, translator, progress_cb=None):
     wb = openpyxl.load_workbook(in_path)
     cells = []
@@ -322,17 +339,18 @@ def translate_xlsx_multi(in_path, out_path, translators, progress_cb=None):
                 if isinstance(cell.value, str) and cell.value.strip():
                     cells.append(cell)
     total = len(cells) or 1
-    for i, cell in enumerate(cells):
-        original = cell.value
-        lines = [original]
-        for code, translator in translators.items():
-            translated = translator.translate(original)
-            lines.append(f"[{CODE_TO_NAME[code]}] {translated}")
-        cell.value = "\n".join(lines)
-        cell.alignment = openpyxl.styles.Alignment(wrap_text=True, vertical="top")
-        cell.font = openpyxl.styles.Font(name=DOCX_UNICODE_FONT, size=cell.font.size)
-        if progress_cb:
-            progress_cb(int((i + 1) / total * 100))
+    with ThreadPoolExecutor(max_workers=max(1, len(translators))) as pool:
+        for i, cell in enumerate(cells):
+            original = cell.value
+            translated_map = translate_segment_all_languages(original, translators, pool)
+            lines = [original]
+            for code in translators:
+                lines.append(f"[{CODE_TO_NAME[code]}] {translated_map[code]}")
+            cell.value = "\n".join(lines)
+            cell.alignment = openpyxl.styles.Alignment(wrap_text=True, vertical="top")
+            cell.font = openpyxl.styles.Font(name=DOCX_UNICODE_FONT, size=cell.font.size)
+            if progress_cb:
+                progress_cb(int((i + 1) / total * 100))
     wb.save(out_path)
 
     preview_lines = []
@@ -416,7 +434,7 @@ def translate_docx_multi(in_path, out_path, translators, progress_cb=None):
     language (labelled), stacked one after another within the same paragraph."""
     doc = Document(in_path)
 
-    def expand_paragraph(paragraph):
+    def expand_paragraph(paragraph, pool):
         original = paragraph.text
         if not original.strip():
             return
@@ -424,8 +442,9 @@ def translate_docx_multi(in_path, out_path, translators, progress_cb=None):
             paragraph.runs[0].text = original
             for run in paragraph.runs[1:]:
                 run.text = ""
-        for code, translator in translators.items():
-            translated = translator.translate(original)
+        translated_map = translate_segment_all_languages(original, translators, pool)
+        for code in translators:
+            translated = translated_map[code]
             paragraph.add_run().add_break()
             label_run = paragraph.add_run(f"[{CODE_TO_NAME[code]}] ")
             label_run.bold = True
@@ -440,10 +459,11 @@ def translate_docx_multi(in_path, out_path, translators, progress_cb=None):
                 targets.extend(cell.paragraphs)
 
     total = len(targets) or 1
-    for i, paragraph in enumerate(targets):
-        expand_paragraph(paragraph)
-        if progress_cb:
-            progress_cb(int((i + 1) / total * 100))
+    with ThreadPoolExecutor(max_workers=max(1, len(translators))) as pool:
+        for i, paragraph in enumerate(targets):
+            expand_paragraph(paragraph, pool)
+            if progress_cb:
+                progress_cb(int((i + 1) / total * 100))
     doc.save(out_path)
 
     preview_lines = [p.text for p in doc.paragraphs if p.text.strip()]
@@ -531,25 +551,27 @@ def translate_pdf_multi(in_path, out_path, translators, progress_cb=None):
         total = (total_lines * len(translators)) or 1
 
         done = 0
-        for i, lines in enumerate(pages_lines):
-            if i > 0:
-                flowables.append(PageBreak())
-            preview_lines.append(f"--- Page {i + 1} ---")
-            for line in lines:
-                text = line["text"]
-                flowables.append(Paragraph(saxutils.escape(text), style_normal))
-                preview_lines.append(text)
-                for code, translator in translators.items():
-                    translated = translator.translate(text) or text
-                    label = CODE_TO_NAME[code]
-                    flowables.append(Paragraph(
-                        f"<b>[{label}]</b> {saxutils.escape(translated)}", style_translation
-                    ))
-                    preview_lines.append(f"[{label}] {translated}")
-                    done += 1
-                    if progress_cb:
-                        progress_cb(int(done / total * 100))
-                flowables.append(Spacer(1, 8))
+        with ThreadPoolExecutor(max_workers=max(1, len(translators))) as pool:
+            for i, lines in enumerate(pages_lines):
+                if i > 0:
+                    flowables.append(PageBreak())
+                preview_lines.append(f"--- Page {i + 1} ---")
+                for line in lines:
+                    text = line["text"]
+                    flowables.append(Paragraph(saxutils.escape(text), style_normal))
+                    preview_lines.append(text)
+                    translated_map = translate_segment_all_languages(text, translators, pool)
+                    for code in translators:
+                        translated = translated_map[code] or text
+                        label = CODE_TO_NAME[code]
+                        flowables.append(Paragraph(
+                            f"<b>[{label}]</b> {saxutils.escape(translated)}", style_translation
+                        ))
+                        preview_lines.append(f"[{label}] {translated}")
+                        done += 1
+                        if progress_cb:
+                            progress_cb(int(done / total * 100))
+                    flowables.append(Spacer(1, 8))
 
     doc = SimpleDocTemplate(out_path, pagesize=letter)
     doc.build(flowables)
